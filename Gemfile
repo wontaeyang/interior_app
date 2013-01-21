@@ -3,13 +3,16 @@ source 'https://rubygems.org'
 gem "rails", "~> 3.2.11"
 gem "bootstrap-sass", "~> 2.2.2.0"
 gem 'bcrypt-ruby', '3.0.1'
+gem "sorcery", "~> 0.8.0"
+gem "jquery-rails", "~> 2.1.4"
 
 group :development, :test do
 	gem "sqlite3", "~> 1.3.7"
-	gem "rspec", "~> 2.12.0"
+	gem "rspec-rails", "~> 2.12.2"
 	gem "guard-rspec", "~> 2.3.3"
 	gem "guard-spork", "~> 1.4.1"
 	gem "spork", "~> 0.9.2"
+	gem 'annotate', '2.5.0'
 end
 
 
@@ -22,7 +25,7 @@ group :assets do
   gem 'uglifier', '~> 1.3.0'
 end
 
-gem 'jquery-rails'
+
 
 group :test do
   gem 'capybara', '2.0.2'

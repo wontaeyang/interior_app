@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>InteriorApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>SHoP // Interior Design Group</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
+	</head>
 
-<%= yield %>
+	<body>
+		<%= render 'layouts/header' %>
+		<div class="wrapper">
+			<div class="container">
+		      
+		      <% flash.each do |key, value| %>
+		        <div class="alert alert-<%= key %>"><%= value %></div>
+		      <% end %>
 
-</body>
+		      <%= yield %>
+	
+	    	</div>
+	    	
+	    </div>
+	    <div class="push"></div>
+	    <div class="footer">
+	    	<div class="container">
+	    		<%= render 'layouts/footer' %>
+	    		<%= debug(params) if Rails.env.development? %>
+	    	</div>
+	    </div>
+	</body>
 </html>
