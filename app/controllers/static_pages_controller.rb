@@ -1,9 +1,12 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
 
-  def help
-  end
+	skip_before_filter :require_login, :only => [:home, :help]
+	
+	def home
+	end
+
+	def help
+	end
 
 
 end

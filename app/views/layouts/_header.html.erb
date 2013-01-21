@@ -44,7 +44,7 @@
         </li>
       <% else %>
         <li>
-          <%= link_to "Register", signup_path %>
+          <%= link_to "Sign Up", signup_path %>
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -52,14 +52,18 @@
           <b class="caret white-caret"></b>
           </a>
           <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-            <%= form_tag sessions_path do %>
-            <%= label_tag :username %>
-            <%= text_field_tag :username %>
+                <%= form_tag sessions_path do %>
+                <%= label_tag :username %>
+                <%= text_field_tag :username %>
 
-            <%= label_tag :password %>
-            <%= password_field_tag :password %>
+                <%= label_tag :password %>
+                <%= password_field_tag :password %>
 
-            <%= submit_tag "Sign in", class: "btn btn-primary" %>
+                <%= check_box_tag :remember_me, 1, params[:remember_me], :style => "float: left;" %>
+                <%= label_tag :remember_me %>
+              
+
+            <%= submit_tag "Sign in", class: "btn btn-custom" %>
       <% end %>
           </ul>
         </li>
