@@ -101,6 +101,15 @@ border-bottom-color: white !important;
   min-width: 180px;
 }
 
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #666;
+}
+
+
 
 // custom footer
 
@@ -199,6 +208,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: #999
 }
 
 .center-align{
