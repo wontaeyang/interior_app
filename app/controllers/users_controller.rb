@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   	@user = User.new
   end
 
+
+
   def create
   	@user = User.new(params[:user])
   	if @user.save
@@ -14,6 +16,25 @@ class UsersController < ApplicationController
   	else
   		render :new
   	end
-  	
   end
+
+
+
+  def edit
+    @user = User.find(session[:user_id])
+  end
+
+
+
+  def update
+    @user = User.find(session[:user_id])
+      if @user.update_attributes(params[:user])
+        flash[:success] = "User was successfully updated"
+        redirect_to root_path
+      else
+        render :action => "edit"
+      end
+    
+  end
+
 end

@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130121012332) do
+ActiveRecord::Schema.define(:version => 20130122000034) do
+
+  create_table "projects", :force => true do |t|
+    t.string   "project_name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "projects", ["project_name", "created_at"], :name => "index_projects_on_project_name_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "username",                     :null => false
@@ -25,5 +33,6 @@ ActiveRecord::Schema.define(:version => 20130121012332) do
   end
 
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end
