@@ -11,9 +11,6 @@
 
 <body>
 	<%= render 'layouts/header' %>
-	<% if current_user %>
-		<%= render 'layouts/menu' %>
-	<% end %>
 
 	<div class="wrapper">
 		<div class="container-fluid">
@@ -25,7 +22,30 @@
 			</div>
 			<% end %>
 
+
+			<% if current_user %>
+			<div class="row-fluid">
+				<div class="span3">
+					<ul class="nav nav-list">
+						<li class="nav-header">Modules</li>
+						<li><%= link_to "Home", root_path%></li>
+						<li><%= link_to "Interior Weekly", projects_path %></li>
+						<li><a href="#">Material DB</a></li>
+						<li><a href="#">Contact</a></li>
+
+						<li class="divider"></li>
+						<%= yield :menu %>
+					</ul>
+				</div>
+				<div class="span9">
+					<%= yield %>
+				</div>
+			</div>
+
+			<% else %>
 			<%= yield %>
+			<% end %>
+
 
 		</div>
 
