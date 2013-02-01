@@ -28,10 +28,11 @@ textarea {
 }
 
 .wrapper {
+  max-width: 940px;
 	min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -75px;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -75px;
 }
 
 .center {
@@ -56,8 +57,8 @@ textarea {
   // max-width: 940px;
   // padding: 0;
   // margin: 0;
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .push {
@@ -75,16 +76,16 @@ textarea {
 .weekly{
   margin-top: 30px;
   .inline {
-  margin-top: 15px;
-  h2{
-    margin-left: 20px;
-    display: inline;
+    margin-top: 15px;
+    h2{
+      margin-left: 20px;
+      display: inline;
+    }
+    a{
+      margin-left: 5px;
+    }
   }
-  a{
-    margin-left: 5px;
-  }
-  }
- }
+}
 
 .shopgreen {
   color: $shopGreen;
@@ -122,8 +123,8 @@ textarea {
 
 .white-caret
 {
-border-top-color: white !important;
-border-bottom-color: white !important;
+  border-top-color: white !important;
+  border-bottom-color: white !important;
 }
 
 .dropdown-menu {
@@ -145,19 +146,28 @@ border-bottom-color: white !important;
 }
 
 
-// custom sidebar
-.nav-list > .active > a,
-.nav-list > .active > a:hover {
-  background-color: $shopGray;
-}
-
-a,
-a:hover{
-  color: $shopGray;
-}
-
-.nav-list {
-margin-top: 25px;
+// custom menu
+.menu-bar {
+  min-height: 15px;
+  margin-left: -20;
+  background-color: $shopGreen;
+  border: none;
+  ul{
+    list-style-type: none;
+    margin-left: 10px;
+    li{
+      float: left;
+      padding-right: 15px;
+      a{
+        text-shadow: 0;
+        color: white;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  
 }
 
 
@@ -231,7 +241,7 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
- }
+}
 
 
 
@@ -271,7 +281,7 @@ p {
 
 
 .circular {
-    width: 300px;
+  width: 300px;
   height: 300px;
   border-radius: 200px;
   -webkit-border-radius: 200px;
@@ -282,7 +292,7 @@ p {
 
   margin-left: auto !important;
   margin-right: auto;
-  }
+}
 
 
 // button
