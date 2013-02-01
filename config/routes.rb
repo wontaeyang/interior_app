@@ -17,6 +17,10 @@ InteriorApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
   match '/edit_profile', to: 'users#edit'
 
+  match '/interior_weekly', to: 'projects#index'
+
+
+
   # get "static_pages/home"
 
   # get "static_pages/help"

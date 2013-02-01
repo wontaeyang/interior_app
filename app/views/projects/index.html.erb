@@ -1,0 +1,48 @@
+<!-- Sub-title for the nav -->
+<% provide(:title, '// Interior Weekly') %>
+
+<!-- Custom menu for the page -->
+<% content_for :menu do %>
+	<li class="nav-header">ACTION</li>
+	<li><a href="#myModal" data-toggle="modal">Add project</a></li>
+  <%= form_for(@project) do |f| %>
+  <%= render 'shared/project_error_messages' %>
+  
+
+  <%= f.text_field :project_name, placeholder:"Project name", class: "input-block-level", id: "appendedInputButton" %>
+  <%= f.submit "Add", class: "btn pull-right" %>
+
+  
+  <% end %>
+	
+<% end %>
+
+<!-- title -->
+
+<div class="center title">
+	<h1>// Interior Weekly</h1>
+</div>
+
+<div class="weekly">
+
+  	<% @projects.each do |p| %>
+		<div class="inline">
+		<!-- <a href="#" data-toggle="modal"><i class="icon-plus"></i></a>
+		<a href="#" data-toggle="modal"><i class="icon-minus"></i></a>	 -->
+		<h2>/ <%= link_to p.project_name.upcase, p %> </h2>
+		<div></div>
+		</div>
+
+    
+      
+
+	<% end %>
+
+</div>
+
+
+
+<!-- modal -->
+
+<%= render 'layouts/modal' %>
+

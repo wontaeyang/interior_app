@@ -1,13 +1,25 @@
-<div class="circular top-offset"> </div>
+<!-- Sub-title for the nav -->
+<% provide(:title, '// Welcome') %>
 
+
+<!-- Sidebar menu -->
+<% content_for :menu do %>
+	<li class="nav-header">ACTION</li>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Library</a></li>
+<% end %>
+
+
+<!-- Content -->
 <div class="center">
-	<h1>Interior Design Group</h1>
+	<div class="circular top-offset"> </div>
+	<h1 class="shopgreen">Interior Design Group</h1>
 	<h2>// Interior Weekly</h2>
 	<h2>// Material Database</h2>
 	<h2>// Contact</h2>
 
 	<p>
-	  Please sign in above to access the exclusive content
+		Please sign in above in the menu bar.
 	</p>
 </div>
 

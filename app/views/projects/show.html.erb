@@ -1,0 +1,44 @@
+
+<!-- Custom menu for the page -->
+<% content_for :menu do %>
+	<li class="nav-header">ACTION</li>
+	<li><a href="#myModal" data-toggle="modal">Add task</a></li>
+	
+<% end %>
+
+<!-- title -->
+
+<div class="center title">
+	<h1>// Interior Weekly</h1>
+</div>
+
+<div class="weekly">
+	<h2><%= @project.project_name.upcase %></h2>
+	<% @tasks.each do |p| %>
+		<div class="inline">
+		<a href="#" data-toggle="modal"><i class="icon-plus"></i></a>
+		<a href="#" data-toggle="modal"><i class="icon-minus"></i></a>	
+		<h2> <%= link_to p.project_name.upcase, p %> </h2>
+		<div></div>
+		</div>
+
+    <div>
+      <% if p.tasks.any? %>
+        <ol class="tasks">
+          <%= render @tasks %>
+        </ol>
+      <% end %>
+
+
+	<% end %>
+
+</div>
+
+
+
+
+<!-- modal -->
+
+<%= render 'layouts/modal' %>
+
+

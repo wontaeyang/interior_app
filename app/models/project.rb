@@ -1,7 +1,10 @@
 class Project < ActiveRecord::Base
-  attr_accessible :project_name
+	has_many :tasks, dependent: :destroy
 
-	validates :project_name length: {minimum: 3
+	attr_accessible :project_name
+	before_save {|project| project.project_name = project_name.downcase }
+
+	validates :project_name, length: {minimum: 3}
 	validates :project_name, presence: true
 	validates :project_name, uniqueness: true
 end
