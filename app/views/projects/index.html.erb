@@ -1,42 +1,33 @@
 <!-- Sub-title for the nav -->
-<% provide(:title, '// Interior Weekly') %>
-
-<!-- Custom menu for the page -->
-<% content_for :menu do %>
-	<li class="nav-header">ACTION</li>
-	<li><a href="#myModal" data-toggle="modal">Add project</a></li>
-  <%= form_for(@project) do |f| %>
-  <%= render 'shared/project_error_messages' %>
-  
-
-  <%= f.text_field :project_name, placeholder:"Project name", class: "input-block-level", id: "appendedInputButton" %>
-  <%= f.submit "Add", class: "btn pull-right" %>
-
-  
-  <% end %>
-	
+<% content_for :title do %>
+<span class="hidden-phone">// Interiors Project Directory</span>
+<span class="visible-phone">// Projects</span>
 <% end %>
+
 
 <!-- title -->
 
 <div class="center title">
-	<h1>// Interior Weekly</h1>
+	<h1>// Projects</h1>
 </div>
 
-<div class="weekly">
+<div class="project-list">
 
-  	<% @projects.each do |p| %>
-		<div class="inline">
-		<!-- <a href="#" data-toggle="modal"><i class="icon-plus"></i></a>
-		<a href="#" data-toggle="modal"><i class="icon-minus"></i></a>	 -->
-		<h2>/ <%= link_to p.project_name.upcase, p %> </h2>
-		<div></div>
-		</div>
+	<% @projects.each do |p| %>
 
-    
-      
+	<div class="projects">
+	<h2>/ <%= p.project_name.upcase %> </h2>
+	<div class="project-links">
+		<i class="icon-calendar"></i>
+		<%= link_to 'Weekly', weekly_path(p) %>
+		<i class="icon-tags"></i>
+		<%= link_to 'Material', "#" %>
+		<i class="icon-remove"></i>
+		<%= link_to "Delete", project_path(p), method: "delete"%>
+	</div>
+</div>
 
-	<% end %>
+<% end %>
 
 </div>
 

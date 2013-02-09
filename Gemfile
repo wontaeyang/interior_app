@@ -8,6 +8,7 @@ gem "jquery-rails", "~> 2.1.4"
 gem "font-awesome-sass-rails", "~> 3.0.0.1"
 gem "bootstrap-editable-rails", "~> 0.0.4"
 
+
 group :development, :test do
 	gem "sqlite3", "~> 1.3.7"
 	gem "rspec-rails", "~> 2.12.2"

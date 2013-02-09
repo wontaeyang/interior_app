@@ -3,6 +3,7 @@ InteriorApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :projects
+  resources :tasks
 
 
 
@@ -17,7 +18,9 @@ InteriorApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
   match '/edit_profile', to: 'users#edit'
 
-  match '/interior_weekly', to: 'projects#index'
+  match '/projects', to: 'projects#index'
+ 
+  match '/weekly/:id', to:'projects#show_task', as: :weekly
 
 
 

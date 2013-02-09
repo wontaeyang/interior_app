@@ -24,13 +24,20 @@ class ProjectsController < ApplicationController
 	  	end
 	end
 
+	def update
+		@project = Project.find(params[:id])
+		@project.update_attributes(params[:project])
+		respond_with @project
+	end
+
+
 	def destroy
 	Project.find(params[:id]).destroy
 	flash[:success] = "Project has been deleted."
 	redirect_to '/projects'
 	end
 
-	def show
+	def show_task
 		@project = Project.find(params[:id])
 		@tasks = @project.tasks.all
 	end

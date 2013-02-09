@@ -7,7 +7,7 @@
         SHoP
       </strong>
       <span class="idg">
-        <%= yield(:title) %>
+        <%= yield :title %>
       </span>
     </a>
     
@@ -17,7 +17,8 @@
       <% if current_user %>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          <i class="icon-user"></i> 
+         <span><i class="icon-user visible-phone"></i>
+         <span class="hidden-phone"> Welcome, </span></span>
           <%= current_user.email.upcase.split("@").first %>
           <b class="caret white-caret"></b>
         </a>

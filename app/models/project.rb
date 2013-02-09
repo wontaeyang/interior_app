@@ -1,8 +1,9 @@
 class Project < ActiveRecord::Base
-	has_many :tasks, dependent: :destroy
+	attr_accessible :project_name, :tasks_attributes
+	before_save {|project| project.project_name = project_name.upcase }
 
-	attr_accessible :project_name
-	before_save {|project| project.project_name = project_name.downcase }
+	has_many :tasks, dependent: :destroy
+	accepts_nested_attributes_for :tasks
 
 	validates :project_name, length: {minimum: 3}
 	validates :project_name, presence: true
