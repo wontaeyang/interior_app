@@ -10,16 +10,14 @@
     <%= f.text_field :project_name %>
     <div id="tasks">
       <div id="task-container">
-      <%= f.fields_for :tasks do |task| %>
-      
-      <%= render 'task_fields', :f => task %>
-    
-      <% end %>
+        <%= f.fields_for :tasks do |task| %>
+        <%= render 'task_fields', :f => task %>
+        <% end %>
       </div>
 
-      <%= link_to_add_association 'Add Task', f, :tasks %>
+      <%= link_to_add_association 'Add Task', f, :tasks, class: "btn btn-custom btn-offset" %>
 
-      <%= f.submit "Save changes", class: "btn btn-custom" %>
+      <%= f.submit "Save changes", class: "btn btn-custom btn-offset" %>
 
       <% end %>
     </div>

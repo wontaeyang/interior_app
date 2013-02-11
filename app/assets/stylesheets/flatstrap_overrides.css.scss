@@ -62,7 +62,7 @@ textarea {
 }
 
 .push {
-  height: 80px;
+  height: 200px;
 }
 
 .footer {
@@ -76,11 +76,13 @@ textarea {
 .project-list{
 
   .projects{
-    padding-top: 15px;
-    border-top: 1px solid $grayMediumLight;
+    margin-top: 15px !important;
+    padding-top: 50px !important;
+    border-top: 1px solid $shopGreen;
     margin-bottom: 20px;
     h2{
       margin: 0;
+      margin-left: 5px;
       padding: 0;
     }
     a{
@@ -100,7 +102,31 @@ textarea {
 
 .shopgreen {
   color: $shopGreen;
+  a{
+    color: $shopGreen;
+  }
+  a:hover{
+    color: $shopGreen;
+    text-decoration: none;
+  }
 }
+
+.shopgray{
+  color: $shopGray;
+  a{
+    color: $shopGray;
+  }
+  a:hover{
+    color: $shopGray;
+    text-decoration: none;
+  }
+}
+
+.black{
+  color: #333;
+}
+      
+
 
 .left{
   float: left;
@@ -108,11 +134,34 @@ textarea {
 
 
 
-//task list
-.task-list{
-  margin-bottom: 30px;
+//task table
+.task-container{
+  margin-left: 30px;
+  margin-bottom: 50px;
+  color: $shopGray;
+  // padding-bottom: 15px;
+  // border-bottom: 1px solid $shopGreen;
+  
+  h5{
+    font-size: 1em;
+    // margin: 0;
+  }
+}
+.task-table{
+  margin-bottom: 15px;
   color: $shopGray;
   margin-left: 30px;
+  .task-status{
+    padding-top: 8px;
+    padding-right: 10px;
+  }
+  td{
+    font-size: 1em;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
 }
 
 
@@ -249,7 +298,11 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+ 
 }
+
+
+
 
 .nested-fields{
   margin-top: 30px;
@@ -259,7 +312,15 @@ input {
 
 }
 .status{
-  padding-top: 45px;
+  margin-top: 5px !important;
+  margin-right: 5px;
+  vertical-align: middle;
+
+  // padding-top: 45px;
+}
+
+.status-chekcbox{
+
 }
 
 
@@ -311,6 +372,9 @@ p {
   text-align: center;
 }
 
+a:hover{
+  text-decoration: none;
+}
 
 // image
 
@@ -331,9 +395,13 @@ p {
 
 
 // button
-
+.btn-offset{
+  margin-top: 30px;
+}
 
 .btn-custom {
+  margin-right: 15px;
+  
   color: #ffffff;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
   background-color: #666;

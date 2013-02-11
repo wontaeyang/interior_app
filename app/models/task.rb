@@ -6,5 +6,5 @@ class Task < ActiveRecord::Base
   validates :description, presence: true, uniqueness: true
 
 
-  default_scope order: 'tasks.created_at DESC'
+  default_scope order: 'tasks.created_at ASC'
 end

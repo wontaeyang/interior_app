@@ -13,11 +13,13 @@
 
 
 <!-- Button to trigger modal -->
-<i class="icon-plus"></i><a href="#myModal" data-toggle="modal">Add New Project</a>
-
+<div class="shopgray span10 offset1">
+<i class="icon-plus black"></i>
+<a href="#addProjectModal" data-toggle="modal">Add New Project</a>
+</div>
 
 <!-- Project listing starts here -->
-<div class="project-list">
+<div class="project-list span10 offset1">
 
 	<% @projects.each do |p| %>
 
@@ -36,31 +38,41 @@
 	</div>
 
 	<% if p.tasks.any? %>
-	<div class="task-list">
+	<div class="task-container">
 		<h5>Active Tasks (<%= p.tasks.where(:status => true).count %>)</h5>
-		<ol class="tasks">
-			<% p.tasks.each do |t| %>
-			<% if t.status == true %>
-				<span>
-					<h5> 
-						<i class="icon-circle shopgreen left"></i> <%= t.description %>
-					</h5>
-				</span>
-			<% end %>
-			<% end %>
-			</ol>
-			<h5>Inactive Tasks (<%= p.tasks.where(:status => false).count %>)</h5>
-			<ol class="tasks">
-			<% p.tasks.each do |t| %>
+		<table class="task-table">
+			<tbody>
+				<% p.tasks.each do |t| %>
+				<% if t.status == true %>
+				<tr>
+					<td class="task-status">
+						<i class="icon-circle shopgreen left"></i> 
+					</td>
+					<td>
+						<%= t.description %>
+					</td>
+				</tr>
+				<% end %>
+				<% end %>
+			</tbody>
+		</table>
+		<h5>Inactive Tasks (<%= p.tasks.where(:status => false).count %>)</h5>
+		<table class="task-table">
+			<tbody>
+				<% p.tasks.each do |t| %>
 				<% if t.status == false %>
-				<span>
-					<h5>
-						<i class="icon-circle-blank left"></i> <%= t.description %>
-					</h5>
-				</span>
-			<% end %>
-			<% end %>
-		</ol>
+				<tr>
+					<td class="task-status">
+						<i class="icon-circle-blank left"></i>
+					</td>
+					<td>
+						<%= t.description %>
+					</td>
+				</tr>
+				<% end %>
+				<% end %>
+			</tbody>
+		</table>
 	</div>
 	<% end %>
 
@@ -69,6 +81,8 @@
 
 
 </div>
+
+<div class="push"></div>
 
 <!-- modal -->
 
