@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :description, :project_id
+  attr_accessible :description, :project_id, :status
   belongs_to :project
 
   validates :project_id, presence: true

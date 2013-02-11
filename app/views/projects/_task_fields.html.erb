@@ -1,0 +1,12 @@
+<div class="nested-fields">
+	<div class="field">
+		
+		<%= f.label :description, "Task Description" %>
+		<%= f.text_field :description, class: "span5" %>
+		<%= f.check_box :status, class: "status-label pull-right" %>
+		<%= f.label :status, class: "status-checkbox inline pull-right" %>
+		
+	</div>
+	
+	<%= link_to_remove_association "remove task", f %>
+</div>

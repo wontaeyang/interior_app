@@ -7,6 +7,7 @@ gem "sorcery", "~> 0.8.0"
 gem "jquery-rails", "~> 2.1.4"
 gem "font-awesome-sass-rails", "~> 3.0.0.1"
 gem "bootstrap-editable-rails", "~> 0.0.4"
+gem "cocoon"
 
 
 group :development, :test do

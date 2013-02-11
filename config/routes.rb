@@ -20,7 +20,10 @@ InteriorApp::Application.routes.draw do
 
   match '/projects', to: 'projects#index'
  
-  match '/weekly/:id', to:'projects#show_task', as: :weekly
+  # match '/weekly/:id', to:'projects#show_weekly', as: :weekly
+  match '/weekly', to:'projects#show_weekly', as: :weekly
+  match '/edit_weekly/:id', to:'projects#edit_weekly', as: :edit_weekly
+
 
 
 

@@ -21,7 +21,6 @@
 
 //= require bootstrap
 
-//= require bootstrap-editable
-//= require bootstrap-editable-rails
+//= require cocoon
 
-// require_tree .
+//= require_tree .
