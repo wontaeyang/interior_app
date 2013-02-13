@@ -48,7 +48,7 @@ textarea {
 
 .title {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 
@@ -74,12 +74,15 @@ textarea {
 }
 
 .project-list{
+  padding-top: 50px !important;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $shopGreen;
+  .project-title{
 
-  .projects{
-    margin-top: 15px !important;
-    padding-top: 50px !important;
-    border-top: 1px solid $shopGreen;
-    margin-bottom: 20px;
+    
+    padding-bottom: 30px !important;
+    
+    
     h2{
       margin: 0;
       margin-left: 5px;
@@ -109,6 +112,15 @@ textarea {
     color: $shopGreen;
     text-decoration: none;
   }
+  a:active{
+    color: $shopGreen;
+  }
+  a:visited{
+    color: $shopGreen;
+  }
+  a:link{
+    color: $shopGreen;
+  }
 }
 
 .shopgray{
@@ -125,20 +137,29 @@ textarea {
 .black{
   color: #333;
 }
-      
+
 
 
 .left{
   float: left;
 }
 
+// module menu
+
+.module-menu{
+  padding-bottom: 10px;
+  border-bottom: 1px solid $shopGreen;
+}
+
+
 
 
 //task table
 .task-container{
-  margin-left: 30px;
-  margin-bottom: 50px;
+  margin-left: 35px;
+  
   color: $shopGray;
+
   // padding-bottom: 15px;
   // border-bottom: 1px solid $shopGreen;
   
@@ -163,6 +184,17 @@ textarea {
   }
   
 }
+
+.task-buttons{
+  border-top: 1px solid $shopGreen;
+  margin-top: 35px;
+  padding-top: 15px;
+}
+
+
+
+
+
 
 
 
@@ -298,7 +330,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
- 
+
 }
 
 
@@ -314,7 +346,7 @@ input {
 .status{
   margin-top: 5px !important;
   margin-right: 5px;
-  vertical-align: middle;
+
 
   // padding-top: 45px;
 }
@@ -423,6 +455,5 @@ a:hover{
   *background-color: #333;
   border-width: 0px;
 }
-
 
 

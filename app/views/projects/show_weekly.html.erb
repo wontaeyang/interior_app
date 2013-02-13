@@ -6,32 +6,37 @@
 
 <!-- content -->
 
-<div class="center title">
+<div class="center title span10 offset1">
 	<h1 class="hidden-phone">// Interiors Weekly</h1>
 	<h1 class="visible-phone">// Weekly</h1>
 </div>
 
 
 <!-- Button to trigger modal -->
-<div class="shopgray span10 offset1">
-<i class="icon-plus black"></i>
-<a href="#addProjectModal" data-toggle="modal">Add New Project</a>
+<div class="shopgray span10 offset1 module-menu">
+	<i class="icon-plus black"></i>
+	<a href="#addProjectModal" data-toggle="modal">Add Project</a>
+	<%= link_to 'PDF', '#', class: "pull-right" %>
+		<i class="icon-print black pull-right" style="margin-right: 5px; margin-left: 25px;"></i>
+
+	
 </div>
 
 <!-- Project listing starts here -->
+
+
+<% @projects.each do |p| %>
+
 <div class="project-list span10 offset1">
-
-	<% @projects.each do |p| %>
-
 	
-	
-	<div class="projects">
+	<div class="project-title">
 		<h2>/ <%= p.project_name.upcase %> 
 			<span class="project-links pull-right" >
 				<i class="icon-pencil"></i>
 				<%= link_to 'Edit', edit_weekly_path(p.id) %>
 				<i class="icon-remove"></i>
-				<%= link_to "Delete", project_path(p), method: "delete"%>
+				<%= link_to "Delete", project_path(p), method: "delete", confirm: "Are you sure?" %>
+				
 			</span>
 		</h2>
 		
@@ -75,12 +80,12 @@
 		</table>
 	</div>
 	<% end %>
-
-	<% end %>
-
-
-
 </div>
+<% end %>
+
+
+
+
 
 <div class="push"></div>
 

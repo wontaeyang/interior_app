@@ -21,23 +21,6 @@
 
 
 
-<!-- Modal -->
-<div id="removeProjectModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Create new project</h3>
-  </div>
-  <div class="modal-body">
-    <%= form_for(@project) do |f| %>
-    <%= render 'shared/project_error_messages' %>
-    <%= f.label :project_name %>
-    <%= f.text_field :project_name, placeholder:"Project name" %>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-    <%= link_to "Delete", project_path(p), method: "delete", class: "btn btn-custom" %>
-    <% end %>
-  </div>
-</div>
+
 
 

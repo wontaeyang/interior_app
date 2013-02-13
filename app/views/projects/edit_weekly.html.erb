@@ -1,7 +1,7 @@
 
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span8 offset2">
     <h1 class="center title">// Edit Project</h1>
     <%= form_for(@project) do |f| %>
     <%= render 'shared/project_error_messages' %>
@@ -15,9 +15,14 @@
         <% end %>
       </div>
 
-      <%= link_to_add_association 'Add Task', f, :tasks, class: "btn btn-custom btn-offset" %>
-
-      <%= f.submit "Save changes", class: "btn btn-custom btn-offset" %>
+      <div class="task-buttons">
+        <div class="shopgray">
+          <i class="icon-plus black"></i>
+          <%= link_to_add_association 'Add Task', f, :tasks %>
+          <%= f.submit "Save changes", class: "btn btn-custom pull-right" %>
+        </div>
+        
+      </div>
 
       <% end %>
     </div>
