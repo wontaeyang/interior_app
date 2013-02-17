@@ -39,6 +39,10 @@ class ProjectsController < ApplicationController
 
 	def show_weekly
 		@projects = Project.all
+		@tasks = Task.all
+		@active = Task.find(:all, :conditions => {:status => true})
+		@inactive = Task.find(:all, :conditions => {:status => false})
+
 		if @projects.empty?
 			flash[:error] = "Threre are no projects to view, create new project to proceed"
 		end

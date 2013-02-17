@@ -4,6 +4,7 @@ InteriorApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :projects
   resources :tasks
+  resources :contact
 
 
 
@@ -19,6 +20,7 @@ InteriorApp::Application.routes.draw do
   match '/edit_profile', to: 'users#edit'
 
   match '/projects', to: 'projects#index'
+  match '/contacts', to: 'projects#index'
  
   # match '/weekly/:id', to:'projects#show_weekly', as: :weekly
   match '/weekly', to:'projects#show_weekly', as: :weekly

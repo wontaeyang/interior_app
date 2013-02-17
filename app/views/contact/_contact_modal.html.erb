@@ -1,0 +1,53 @@
+<!-- Modal -->
+<div id="addContactModal" class="modal hide fade" tabindex="-1" data-replace="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create new project</h3>
+  </div>
+  <div class="modal-body">
+    <%= form_for(@contact) do |f| %>
+    <%= render 'shared/contact_error_messages' %>
+
+    <%= f.label :mfr, "Manufacturer" %>
+    <%= f.text_field :mfr, placeholder:"Manufacturer name" %>
+    
+    <%= f.label :dist, "Distributor" %>
+    <%= f.text_field :dist, placeholder:"Distributor name" %>
+    
+    <%= f.label :contact, "Contact" %>
+    <%= f.text_field :contact, placeholder:"Contact name" %>
+    
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email, placeholder:"Contact E-mail" %>
+    
+    <%= f.label :address1, "Address Line 1" %>
+    <%= f.text_field :address1, placeholder:"Street Address" %>
+    
+    <%= f.label :address2, "Address Line 2" %>
+    <%= f.text_field :address2, placeholder:"State, Zipcode" %>
+    
+    <%= f.label :tel, "Telephone Number" %>
+    <%= f.text_field :address2, placeholder:"xxx-xxx-xxx" %>
+
+    <%= f.label :fax, "Fax Number" %>
+    <%= f.text_field :fax, placeholder:"xxx-xxx-xxx" %>
+
+    <%= f.label :webpage, "Webpage Address" %>
+    <%= f.text_field :webpage, placeholder:"http://" %>
+
+    <%= f.label :specialty, "Specialty" %>
+    <%= f.text_field :specialty, placeholder:"Furniture, Flooring, etc..." %>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <%= f.submit "Create Contact", class: "btn btn-custom" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+

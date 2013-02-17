@@ -22,22 +22,31 @@
          <%= current_user.email.upcase.split("@").first %>
          <b class="caret white-caret"></b>
        </a>
-       <ul class="dropdown-menu">
+       <ul class="dropdown-menu shopgray">
         <li>
-          <%= link_to "Edit Profile", edit_profile_path %>
+          <span>
+            <i class="icon-pencil dropdown-menu-icon black"></i>
+            <%= link_to "Edit Profile", edit_profile_path %>
+          </span>
         </li>
         <li>
-          <%= link_to "Settings", '#' %>
+          <span>
+            <i class="icon-cogs  dropdown-menu-icon black"></i>
+            <%= link_to "Settings", '#' %>
+          </span>
         </li>
         <li class="divider"></li>
         <li>
-          <%= link_to "Sign out", signout_path, method: "delete"%>
+          <span>
+            <i class="icon-signout dropdown-menu-icon black"></i>
+            <%= link_to "Sign out", signout_path, method: "delete"%>
+          </span>
         </li>
       </ul>
     </li>
     <% else %>
     <li>
-      <%= link_to "Sign Up", signup_path %>
+      <%= link_to "Register", signup_path %>
     </li>
     <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">

@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210230527) do
+ActiveRecord::Schema.define(:version => 20130214032132) do
+
+  create_table "contacts", :force => true do |t|
+    t.string   "mfr"
+    t.string   "dist"
+    t.string   "contact"
+    t.string   "email"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "tel"
+    t.string   "fax"
+    t.string   "webpage"
+    t.string   "specialty"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "contacts", ["mfr", "dist", "contact", "specialty"], :name => "index_contacts_on_mfr_and_dist_and_contact_and_specialty"
 
   create_table "projects", :force => true do |t|
     t.string   "project_name"

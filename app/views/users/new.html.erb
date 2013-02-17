@@ -1,11 +1,13 @@
 <!-- Sub-title for the nav -->
-<% provide(:title, '// Sign up') %>
+<% provide(:title, '// Register') %>
 
 
 
 <div class="row">
   <div class="span6 offset3">
-    <h1 class="center top-offset">Sign Up</h1>
+    <div class="title-static">
+    <h1>// Register</h1>
+    </div>
     <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
     <%= f.label :username %>

@@ -1,7 +1,11 @@
-<h1 class="center top-offset">Edit Your Profile</h1>
+<!-- Sub-title for the nav -->
+<% provide(:title, '// Edit Profile') %>
 
 <div class="row">
   <div class="span6 offset3">
+    <div class="title-static">
+    <h1>// Edit Profile</h1>
+    </div>
    	<%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 

@@ -47,8 +47,15 @@ textarea {
 }
 
 .title {
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.title-static{
+  margin-top: 60px;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+  border-bottom: 4px solid $shopGreen;
+ 
 }
 
 
@@ -76,7 +83,7 @@ textarea {
 .project-list{
   padding-top: 50px !important;
   padding-bottom: 30px;
-  border-bottom: 1px solid $shopGreen;
+  border-bottom: 2px solid $shopGreen;
   .project-title{
 
     
@@ -148,7 +155,7 @@ textarea {
 
 .module-menu{
   padding-bottom: 10px;
-  border-bottom: 1px solid $shopGreen;
+  border-bottom: 4px solid $shopGreen;
 }
 
 
@@ -186,7 +193,7 @@ textarea {
 }
 
 .task-buttons{
-  border-top: 1px solid $shopGreen;
+  border-top: 2px solid $shopGreen;
   margin-top: 35px;
   padding-top: 15px;
 }
@@ -233,6 +240,11 @@ textarea {
 
 .dropdown-menu {
   min-width: 180px;
+}
+
+.dropdown-menu-icon {
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .dropdown-menu li > a:hover,
@@ -333,6 +345,10 @@ input {
 
 }
 
+.login-input {
+  width: auto;
+ 
+}
 
 
 
@@ -455,5 +471,12 @@ a:hover{
   *background-color: #333;
   border-width: 0px;
 }
+
+//statistics
+.statistics{
+  margin-top: 30px;
+}
+
+
 
 

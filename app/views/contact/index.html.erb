@@ -1,0 +1,27 @@
+<!-- Sub-title for the nav -->
+<% provide(:title, '// Contact') %>
+
+
+<!-- content -->
+<div class="span10 offset1">
+
+	<div class="title">
+		<h1>// Contact</h1>
+	</div>
+
+	<!-- Button to trigger modal -->
+	<div class="shopgray module-menu">
+		<i class="icon-plus black"></i>
+		<a href="#addContactModal" data-toggle="modal">Add Contact</a>
+		<i class="icon-print black" style="margin-right: 5px; margin-left: 20px;"></i>
+		<%= link_to 'PDF', '#' %>
+	</div>
+
+
+</div>
+
+
+
+<!-- modal -->
+
+<%= render 'contact_modal' %>
