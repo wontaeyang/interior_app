@@ -3,19 +3,19 @@
 <head>
 	<%= favicon_link_tag image_path("favicon.ico") %>
 
-
 	<title>SHoP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
 	<%= render 'layouts/shim' %>
+
 </head>
 
 <body>
 	<%= render 'layouts/header' %>
 	<% if current_user %>
-		<%= render 'layouts/menu' %>
+	<%= render 'layouts/menu' %>
 	<% end %>
 
 	<div class="wrapper">

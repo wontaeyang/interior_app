@@ -12,16 +12,11 @@
 	<!-- Button to trigger modal -->
 	<div class="shopgray module-menu">
 		<i class="icon-plus black"></i>
-		<a href="#addContactModal" data-toggle="modal">Add Contact</a>
+		<%= link_to "Add Contact", new_contact_path %>
 		<i class="icon-print black" style="margin-right: 5px; margin-left: 20px;"></i>
 		<%= link_to 'PDF', '#' %>
 	</div>
-
-
 </div>
 
 
 
-<!-- modal -->
-
-<%= render 'contact_modal' %>

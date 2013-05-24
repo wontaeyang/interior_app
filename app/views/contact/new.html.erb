@@ -1,10 +1,13 @@
-<!-- Modal -->
-<div id="addContactModal" class="modal hide fade" tabindex="-1" data-replace="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Create new project</h3>
-  </div>
-  <div class="modal-body">
+<!-- Sub-title for the nav -->
+<% provide(:title, '// Register') %>
+
+
+
+<div class="row">
+  <div class="span6 offset3">
+    <div class="title-static">
+    <h1>// Add Contact</h1>
+    </div>
     <%= form_for(@contact) do |f| %>
     <%= render 'shared/contact_error_messages' %>
 
@@ -37,17 +40,9 @@
 
     <%= f.label :specialty, "Specialty" %>
     <%= f.text_field :specialty, placeholder:"Furniture, Flooring, etc..." %>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <%= f.submit "Create Contact", class: "btn btn-custom" %>
+
+    <%= f.submit "Create Contact", class: "btn btn-large btn-custom btn-offset pull-right" %>
+
     <% end %>
   </div>
 </div>
-
-
-
-
-
-
-

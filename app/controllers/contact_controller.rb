@@ -5,16 +5,16 @@ class ContactController < ApplicationController
 		if @contacts.empty?
 			flash[:error] = "Threre are no contacts to view, create new contact to proceed"
 		end
-		@contact = Contact.new
+		
 	end
 
 	# def create
 		
 	# end
 
-	# def new
-		
-	# end
+	def new
+		@contact = Contact.new
+	end
 
 	# def edit
 		

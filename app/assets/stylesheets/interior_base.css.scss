@@ -28,10 +28,11 @@ textarea {
 }
 
 .wrapper {
+
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -75px;
+  margin: 0;
 }
 
 .center {
@@ -199,8 +200,9 @@ textarea {
 }
 
 
-
-
+.task-field-width{
+  width: 100%;
+}
 
 
 
@@ -209,6 +211,12 @@ textarea {
 
 .idg{
 	font-size: .8em
+}
+
+.navbar-inner{
+  margin: 0 !important;
+  padding: 0 !important;
+
 }
 
 .navbar-inverse .navbar-inner {
@@ -264,8 +272,8 @@ textarea {
 
 // custom menu
 .menu-bar {
-  min-height: 15px;
-  margin-left: -20;
+  max-height: 26px;
+  //margin-left: -20;
   background-color: $shopGreen;
   border: none;
   ul{
@@ -285,6 +293,11 @@ textarea {
     }
   }
   
+}
+
+ul{
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -331,7 +344,11 @@ textarea {
 
 
 // custom form css
-
+.input-container {
+  display: inline-block;
+  padding: 0;
+  overflow: hidden;
+}
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -362,6 +379,12 @@ input {
 .status{
   margin-top: 5px !important;
   margin-right: 5px;
+
+
+.task-input-width{
+  width: 80%;
+}
+
 
 
   // padding-top: 45px;
@@ -444,11 +467,11 @@ a:hover{
 
 // button
 .btn-offset{
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .btn-custom {
-  margin-right: 15px;
+  margin-left: 15px;
   
   color: #ffffff;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);

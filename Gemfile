@@ -1,13 +1,9 @@
 source 'https://rubygems.org'
 
 gem "rails", "~> 3.2.12"
-
 gem 'bcrypt-ruby', '3.0.1'
 gem "sorcery", "~> 0.8.1"
-
 gem "cocoon", "1.1.2"
-
-
 
 group :development, :test do
 	gem "sqlite3", "~> 1.3.7"
@@ -18,8 +14,6 @@ group :development, :test do
 	gem 'annotate', '2.5.0'
 end
 
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,13 +21,10 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '~> 1.3.0'
   gem "jquery-rails", "~> 2.1.4"
-  gem "bootstrap-sass", "~> 2.3.0.0"
+  gem "bootstrap-sass", "2.3.0.1"
   gem "font-awesome-sass-rails", "~> 3.0.2.1"
-  gem "bootstrap-editable-rails", "~> 0.0.4"
-  
+  # gem "bootstrap-editable-rails", "~> 0.0.4"
 end
-
-
 
 group :test do
   gem 'capybara', '2.0.2'
